@@ -10,12 +10,14 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
+import android.os.Environment;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -24,7 +26,15 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+
+import static android.R.attr.data;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView lvLocations;
     ArrayList<String> locationsList;
     ArrayAdapter<String> myarrayAdapter;
+    private static final String TAG = "MEDIA";
 
     @Override
     protected void onResume() {
@@ -51,10 +62,29 @@ public class MainActivity extends AppCompatActivity {
 
                     locationsList.add("Latitude: " + latitude + ", Longtitude: " + longtitude);
                     myarrayAdapter.notifyDataSetChanged();
+
+                    try {
+                        Toast.makeText(context, "Saved Here: " + getExternalFilesDir("MyFileStorage").toString(), Toast.LENGTH_SHORT).show();
+                        File myExternalFile = new File(getExternalFilesDir("MyFileStorage"), "test.txt");
+
+                        FileOutputStream fos = new FileOutputStream(myExternalFile, true);
+                        fos.write(("Latitude: " + latitude + ", Longtitude: " + longtitude + "\n").getBytes());
+                        fos.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             };
         }
         registerReceiver(broadcastReceiver, new IntentFilter("location_update"));
+    }
+
+    public boolean fileExists(Context context, String filename) {
+        File file = context.getFileStreamPath(filename);
+        if(file == null || !file.exists()) {
+            return false;
+        }
+        return true;
     }
 
     @Override
