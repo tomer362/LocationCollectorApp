@@ -32,7 +32,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 import static android.R.attr.data;
 
@@ -64,8 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     myarrayAdapter.notifyDataSetChanged();
 
                     try {
-                        Toast.makeText(context, "Saved Here: " + getExternalFilesDir("MyFileStorage").toString(), Toast.LENGTH_SHORT).show();
-                        File myExternalFile = new File(getExternalFilesDir("MyFileStorage"), "test.txt");
+                        File myExternalFile = new File(getExternalFilesDir("MyFileStorage"), "locations.txt");
 
                         FileOutputStream fos = new FileOutputStream(myExternalFile, true);
                         fos.write(("Latitude: " + latitude + ", Longtitude: " + longtitude + "\n").getBytes());
@@ -119,8 +121,25 @@ public class MainActivity extends AppCompatActivity {
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), GPS_Service.class);
-                startService(i);
+            Intent i = new Intent(getApplicationContext(), GPS_Service.class);
+            startService(i);
+
+            Toast.makeText(MainActivity.this, "Saved Here: " + getExternalFilesDir("MyFileStorage").toString() + "\\locations.txt", Toast.LENGTH_SHORT).show();
+            File myExternalFile = new File(getExternalFilesDir("MyFileStorage"), "locations.txt");
+
+
+            Date newDate  = new Date(System.currentTimeMillis());
+
+            FileOutputStream fos = null;
+            try {
+                fos = new FileOutputStream(myExternalFile, true);
+                fos.write(("\n" + "[Started Recording At: " + newDate.toString() + "]:\n").getBytes());
+                fos.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             }
         });
         stopBtn.setOnClickListener(new View.OnClickListener() {
