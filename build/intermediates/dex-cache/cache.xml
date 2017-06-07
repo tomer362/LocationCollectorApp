@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\901ba45f3768dcd44fceed8f175d24261e1325df\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\classes_3eae4c6b42c2613a476b57d27ed75d7b91e82c28.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\1f1d4293fec2e2732bf8580381eb97a56bf8c660\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\classes_2e638afe27b8c9a2578f3eb4075b8c7b24dc1b04.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\a6b6b9f0202e0602f9a96d730faaa3d42b120b66\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_7f1670ad9bb55d653f06f8810674e4530320c8f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\408752e60b8b6740c8ff0c3daa439d1c2bc1ce7d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\classes_976e9fc0aaaaaf769ea9da716606f8daaab77541.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\99f250c3548f9ebe60cf82f7f30c953d6725ba2a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\classes_b495883afa69b6abed627639823debacdb986202.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\0c300fbc577de7fc8be909b7c02b73d501b6cd48\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\classes_6ed9fb8f9a7f9bd7525c5fd8fcc08f99b4921c5d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\a6b6b9f0202e0602f9a96d730faaa3d42b120b66\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\classes_3963574e0934285238b314c7d71e037eeda3e837.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\fae084ff303f57a24aa9a6cb06305fd92282ad68\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\classes_8e487317f6ac7a19126873a9473539817836c983.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\8bdb0f57e432b493e46952b3c611bfa5b0ede1c8\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_ec107cd923a593354a5f041d0fde3f6be1475115.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_4d6e164fc8b1f187e82f511f2aa812e756d1b577.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\8bdb0f57e432b493e46952b3c611bfa5b0ede1c8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\classes_9fdaf51fda87d449532a2bc06a8541312fdd86b7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\71f1bf946fe54618c274465132e07fb6775c4e9f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\classes_6480de7722062cf7804c350ee9e2b03f547c1691.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\54fd785a4e7ac65ebd92982abab855f5a02ca9c4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\classes_1aa3dcee3c36fa79d506af2dddcfa5174bbfbd59.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_16f2598340574f3bac8f6d0659d012020d06079b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\99f250c3548f9ebe60cf82f7f30c953d6725ba2a\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_cbfa16ffba34eba4aea07c725cf004e196780ee9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\1f1d4293fec2e2732bf8580381eb97a56bf8c660\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_cda2d79a4c17c46c5d5580547d24924b0633c111.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tomer\.android\build-cache\0c300fbc577de7fc8be909b7c02b73d501b6cd48\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="D:\AndroidStudioLearning\AndroidStudioProjects\LearningAndroid\LocationCollector\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_5846a3edb5157ac1ee44d349fe76029e00425177.jar" />
+    </item>
+
+</items>
