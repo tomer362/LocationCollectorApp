@@ -47,8 +47,10 @@ public class MainActivity extends AppCompatActivity {
     private BroadcastReceiver broadcastReceiver;
     private ListView lvLocations;
     ArrayList<String> locationsList;
-    ArrayAdapter<String> myarrayAdapter;
-    private static final String TAG = "MEDIA";
+    ArrayAdapter<String> adp;
+    private String filenameToSaveTo = "";
+    private boolean isRecording = false;
+
 
     @Override
     protected void onResume() {
@@ -64,10 +66,10 @@ public class MainActivity extends AppCompatActivity {
                     tvLong.setText("Long: " + longtitude);
 
                     locationsList.add("Latitude: " + latitude + ", Longtitude: " + longtitude);
-                    myarrayAdapter.notifyDataSetChanged();
+                    adp.notifyDataSetChanged();
 
                     try {
-                        File myExternalFile = new File(getExternalFilesDir("MyFileStorage"), "locations.txt");
+                        File myExternalFile = new File(getExternalFilesDir("MyFileStorage"), filenameToSaveTo);
 
                         FileOutputStream fos = new FileOutputStream(myExternalFile, true);
                         fos.write(("Latitude: " + latitude + ", Longtitude: " + longtitude + "\n").getBytes());
@@ -109,8 +111,8 @@ public class MainActivity extends AppCompatActivity {
         lvLocations = (ListView) findViewById(R.id.lvLocations);
         locationsList = new ArrayList<String>();
 
-        myarrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, locationsList);
-        lvLocations.setAdapter(myarrayAdapter);
+        adp = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, locationsList);
+        lvLocations.setAdapter(adp);
         if(!runtime_permissions())
         {
             enable_buttons();
@@ -121,25 +123,32 @@ public class MainActivity extends AppCompatActivity {
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Intent i = new Intent(getApplicationContext(), GPS_Service.class);
-            startService(i);
+                if (isRecording == false) {
 
-            Toast.makeText(MainActivity.this, "Saved Here: " + getExternalFilesDir("MyFileStorage").toString() + "\\locations.txt", Toast.LENGTH_SHORT).show();
-            File myExternalFile = new File(getExternalFilesDir("MyFileStorage"), "locations.txt");
+                    Intent i = new Intent(getApplicationContext(), GPS_Service.class);
+                    startService(i);
 
+                    isRecording = true;
 
-            Date newDate  = new Date(System.currentTimeMillis());
+                    Date newDate = new Date(System.currentTimeMillis());
+                    filenameToSaveTo = newDate.toString() + ".txt";
+                    Toast.makeText(MainActivity.this, "Saved Here: " + getExternalFilesDir("MyFileStorage").toString() + "\\" + filenameToSaveTo, Toast.LENGTH_SHORT).show();
 
-            FileOutputStream fos = null;
-            try {
-                fos = new FileOutputStream(myExternalFile, true);
-                fos.write(("\n" + "[Started Recording At: " + newDate.toString() + "]:\n").getBytes());
-                fos.close();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+                    File myExternalFile = new File(getExternalFilesDir("MyFileStorage"), "locations.txt");
+
+                    FileOutputStream fos = null;
+                    try {
+                        fos = new FileOutputStream(myExternalFile, true);
+                        fos.close();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "Already Recording Location Data!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         stopBtn.setOnClickListener(new View.OnClickListener() {
@@ -149,6 +158,10 @@ public class MainActivity extends AppCompatActivity {
                 tvLong.setText("Long: None");
                 Intent i = new Intent(getApplicationContext(), GPS_Service.class);
                 stopService(i);
+                locationsList.clear();
+                adp.notifyDataSetChanged();
+
+                isRecording = false;
             }
         });
     }
