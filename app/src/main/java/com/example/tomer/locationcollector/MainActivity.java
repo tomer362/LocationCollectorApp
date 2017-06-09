@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
     private ListView lvLocations;
     ArrayList<String> locationsList;
     ArrayAdapter<String> adp;
-    private String filenameToSaveTo = "";
     private boolean isRecording = false;
 
 
@@ -67,16 +66,6 @@ public class MainActivity extends AppCompatActivity {
 
                     locationsList.add("Latitude: " + latitude + ", Longtitude: " + longtitude);
                     adp.notifyDataSetChanged();
-
-                    try {
-                        File myExternalFile = new File(getExternalFilesDir("MyFileStorage"), filenameToSaveTo);
-
-                        FileOutputStream fos = new FileOutputStream(myExternalFile, true);
-                        fos.write(("Latitude: " + latitude + ", Longtitude: " + longtitude + "\n").getBytes());
-                        fos.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
                 }
             };
         }
@@ -126,25 +115,10 @@ public class MainActivity extends AppCompatActivity {
                 if (isRecording == false) {
 
                     Intent i = new Intent(getApplicationContext(), GPS_Service.class);
+
                     startService(i);
 
                     isRecording = true;
-
-                    Date newDate = new Date(System.currentTimeMillis());
-                    filenameToSaveTo = newDate.toString() + ".txt";
-                    Toast.makeText(MainActivity.this, "Saved Here: " + getExternalFilesDir("MyFileStorage").toString() + "\\" + filenameToSaveTo, Toast.LENGTH_SHORT).show();
-
-                    File myExternalFile = new File(getExternalFilesDir("MyFileStorage"), "locations.txt");
-
-                    FileOutputStream fos = null;
-                    try {
-                        fos = new FileOutputStream(myExternalFile, true);
-                        fos.close();
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
                 }
                 else{
                     Toast.makeText(MainActivity.this, "Already Recording Location Data!", Toast.LENGTH_SHORT).show();
